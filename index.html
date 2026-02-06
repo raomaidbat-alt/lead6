@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Карта Упаковки и Системы Продаж — Пошаговый Гайд 2026</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Интерактивный гайд по упаковке бизнеса за 30 дней. Готовые промты для нейросетей, чек-листы и стратегии продаж.">
+    <meta name="keywords" content="упаковка бизнеса, маркетинговая стратегия, промты для бизнеса, система продаж, лид-магнит">
+    <meta property="og:title" content="Карта Упаковки и Системы Продаж">
+    <meta property="og:description" content="Превратите хаос в системную машину продаж за 30 дней.">
+    <meta property="og:type" content="website">
+
+    <!-- CSS & Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+      // Расширенный мониторинг ошибок для GitHub Pages
+      window.onerror = function(msg, url, line, col, error) {
+        var errorDiv = document.getElementById('error-display');
+        if (errorDiv) {
+          errorDiv.style.display = 'block';
+          errorDiv.innerHTML = '<div class="p-6 bg-red-900/90 border-2 border-red-500 rounded-2xl text-red-100 text-sm text-left shadow-2xl">' +
+            '<h3 class="font-bold text-lg mb-2">Критическая ошибка загрузки:</h3>' +
+            '<p class="mb-2"><strong>Сообщение:</strong> ' + msg + '</p>' +
+            '<p class="opacity-70"><strong>Файл:</strong> ' + url + ':' + line + ':' + col + '</p>' +
+            '<button onclick="location.reload()" class="mt-4 px-4 py-2 bg-red-600 rounded-lg font-bold hover:bg-red-500 transition-colors">Перезагрузить страницу</button>' +
+            '</div>';
+        }
+        return false;
+      };
+
+      tailwind.config = {
+        safelist: [
+          'bg-neon-blue', 'text-neon-blue', 'border-neon-blue',
+          'bg-neon-yellow', 'text-neon-yellow', 'border-neon-yellow',
+          'from-neon-blue', 'to-neon-yellow', 'bg-dark-900', 'bg-dark-800'
+        ],
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Manrope', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              dark: { 900: '#020617', 800: '#0f172a' },
+              neon: { yellow: '#FACC15', blue: '#3B82F6' }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body { background-color: #020617; color: #F8FAFC; margin: 0; min-height: 100vh; overflow-x: hidden; }
+      .loading-fade { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+      .glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    </style>
+    
+    <!-- Unified Import Map: Зафиксированы версии для стабильности на GitHub Pages -->
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.463.0?external=react",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root">
+      <div class="min-h-screen flex flex-col items-center justify-center p-6 text-center bg-dark-900">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 font-display text-white">System.Guide</h1>
+        <p class="text-slate-400 text-lg max-w-lg mb-8 loading-fade">Инициализация интерактивной стратегии...</p>
+        
+        <!-- Сюда будут выводиться ошибки, если JS не загрузится -->
+        <div id="error-display" class="hidden mb-8 max-w-xl w-full relative z-50"></div>
+
+        <div class="flex gap-4">
+            <div class="w-12 h-1 bg-neon-blue/20 rounded-full overflow-hidden">
+                <div class="w-1/2 h-full bg-neon-blue animate-[slide_1.5s_infinite]"></div>
+            </div>
+        </div>
+        <style>@keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(200%); } }</style>
+        
+        <noscript>
+          <div class="mt-8 p-6 bg-red-500/10 border border-red-500/20 rounded-xl max-w-md">
+            <p class="text-red-400">Включите JavaScript для полноценной работы карты упаковки.</p>
+          </div>
+        </noscript>
+      </div>
+    </div>
+
+    <!-- Запуск через Babel с поддержкой TSX и Модулей -->
+    <script type="text/babel" data-presets="react,typescript" data-type="module">
+      import "./index.tsx";
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
